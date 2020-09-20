@@ -52,7 +52,7 @@ class MessageController extends Controller
         );
     }
 
-    public function index($id): ?JsonResponse
+    public function getAllMessages($id): ?JsonResponse
     {
         return $this->responseWithCollection(
             new MessageCollection($this->message->getAll($id))
