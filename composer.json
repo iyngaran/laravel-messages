@@ -1,0 +1,56 @@
+{
+    "name": "iyngaran/laravel-messages",
+    "description": "The laravel package to manage messages",
+    "keywords": [
+        "iyngaran",
+        "laravel-messages"
+    ],
+    "homepage": "https://github.com/iyngaran/laravel-messages",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Iyathurai Iyngaran",
+            "email": "dev@iyngaran.info",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "^7.0",
+        "iyngaran/api-response": "dev-develop",
+        "doctrine/dbal": "^2.10"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.0",
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Iyngaran\\LaravelMessages\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Iyngaran\\LaravelMessages\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Iyngaran\\LaravelMessages\\LaravelMessagesServiceProvider"
+            ],
+            "aliases": {
+                "LaravelMessages": "Iyngaran\\LaravelMessages\\LaravelMessagesFacade"
+            }
+        }
+    }
+}
