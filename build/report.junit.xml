@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="Test Suite" tests="2" assertions="5" errors="0" warnings="0" failures="0" skipped="0" time="0.110668">
+    <testsuite name="Iyngaran\LaravelMessages\Tests\ExampleTest" file="/Users/iyngaran/dev/laravel/packages/laravel-messages/tests/ExampleTest.php" tests="2" assertions="5" errors="0" warnings="0" failures="0" skipped="0" time="0.110668">
+      <testcase name="true_is_true" class="Iyngaran\LaravelMessages\Tests\ExampleTest" classname="Iyngaran.LaravelMessages.Tests.ExampleTest" file="/Users/iyngaran/dev/laravel/packages/laravel-messages/tests/ExampleTest.php" line="16" assertions="1" time="0.104487"/>
+      <testcase name="check_config" class="Iyngaran\LaravelMessages\Tests\ExampleTest" classname="Iyngaran.LaravelMessages.Tests.ExampleTest" file="/Users/iyngaran/dev/laravel/packages/laravel-messages/tests/ExampleTest.php" line="22" assertions="4" time="0.006181"/>
+    </testsuite>
+  </testsuite>
+</testsuites>

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateMessagesTable extends Migration
+class CreateRepliesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,18 +13,16 @@ class CreateMessagesTable extends Migration
      */
     public function up()
     {
-        Schema::create(config('iyngaran.messages.messages_table_name'), function (Blueprint $table) {
+        Schema::create(config('iyngaran.messages.replies_table_name'), function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('message_from_name');
             $table->string('message_from_email');
-            $table->string('message_from_phone')->nullable();
+            $table->string('message_from_phone');
             $table->text('message');
-            $table->unsignedBigInteger('user_id')->nullable();
-            $table->unsignedBigInteger('messageable_id')->nullable();
-            $table->string('messageable_type')->nullable();
+            $table->unsignedBigInteger('message_id')->nullable();
             $table->softDeletes();
             $table->timestamps();
-            $table->foreign('user_id')->references('id')->on(config('iyngaran.messages.user_table_name'))
+            $table->foreign('message_id')->references('id')->on(config('iyngaran.messages.messages_table_name'))
                 ->onDelete('cascade');
         });
     }
@@ -36,6 +34,6 @@ class CreateMessagesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists(config('iyngaran.messages.messages_table_name'));
+        Schema::dropIfExists(config('iyngaran.messages.replies_table_name'));
     }
 }

@@ -5,7 +5,7 @@ namespace Iyngaran\LaravelMessages\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Message extends Model
+class Reply extends Model
 {
     protected $guarded = [];
 
@@ -15,11 +15,11 @@ class Message extends Model
 
     public function getTable()
     {
-        return config('iyngaran.messages.messages_table_name');
+        return config('iyngaran.messages.replies_table_name');
     }
 
-    public function replies()
+    public function message()
     {
-        return $this->hasMany(Reply::class);
+        return $this->belongsTo(Message::class);
     }
 }

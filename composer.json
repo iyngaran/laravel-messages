@@ -17,7 +17,6 @@
     ],
     "require": {
         "php": "^7.1",
-        "illuminate/support": "^7.0",
         "iyngaran/api-response": "dev-develop",
         "doctrine/dbal": "^2.10"
     },
