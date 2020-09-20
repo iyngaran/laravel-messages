@@ -4,6 +4,7 @@
 namespace Iyngaran\LaravelMessages\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Iyngaran\ApiResponse\Http\Traits\ApiResponse;
 use Iyngaran\LaravelMessages\Http\Requests\MessageRequest;
