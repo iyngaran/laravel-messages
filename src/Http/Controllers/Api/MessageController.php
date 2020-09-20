@@ -38,7 +38,7 @@ class MessageController extends Controller
                 'message_from_phone' => $message_from_phone,
                 'message' => $message,
                 'messageable_id' => $messageable_id,
-
+                'messageable_type' => config('iyngaran.messages.messageable_type'),
             ]
         );
         return $this->createdResponse(
