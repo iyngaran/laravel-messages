@@ -8,6 +8,7 @@ use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Iyngaran\ApiResponse\Http\Traits\ApiResponse;
 use Iyngaran\LaravelMessages\Http\Requests\MessageRequest;
+use Iyngaran\LaravelMessages\Http\Resources\MessageCollection;
 use Iyngaran\LaravelMessages\Models\Message;
 use Iyngaran\LaravelMessages\Http\Resources\Message as MessageResource;
 use Iyngaran\LaravelMessages\Repositories\MessageRepositoryInterface;
