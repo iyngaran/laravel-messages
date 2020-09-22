@@ -5,7 +5,7 @@ namespace Iyngaran\LaravelMessages\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class Reply extends FormRequest
+class ReplyRequest extends FormRequest
 {
     public function authorize()
     {
@@ -15,8 +15,6 @@ class Reply extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required',
-            'email' => 'required',
             'message' => 'required'
 
         ];
@@ -25,8 +23,6 @@ class Reply extends FormRequest
     public function messages()
     {
         return [
-            'name.required' => 'The name field is required',
-            'email.required' => 'The email field is required',
             'message.required' => 'The message field is required'
         ];
     }

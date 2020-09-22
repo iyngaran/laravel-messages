@@ -15,14 +15,14 @@ class CreateRepliesTable extends Migration
     {
         Schema::create(config('iyngaran.messages.replies_table_name'), function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('message_from_name');
-            $table->string('message_from_email');
-            $table->string('message_from_phone');
             $table->text('message');
             $table->unsignedBigInteger('message_id')->nullable();
+            $table->unsignedBigInteger('user_id')->nullable();
             $table->softDeletes();
             $table->timestamps();
             $table->foreign('message_id')->references('id')->on(config('iyngaran.messages.messages_table_name'))
+                ->onDelete('cascade');
+            $table->foreign('user_id')->references('id')->on(config('iyngaran.messages.user_table_name'))
                 ->onDelete('cascade');
         });
     }

@@ -3,15 +3,16 @@
 
 namespace Iyngaran\LaravelMessages\Http\Controllers\Api;
 
+use Iyngaran\LaravelMessages\Http\Resources\Message as MessageResource;
+use Iyngaran\LaravelMessages\Repositories\MessageRepositoryInterface;
+use Iyngaran\LaravelMessages\Http\Resources\MessageCollection;
+use Iyngaran\LaravelMessages\Http\Requests\MessageRequest;
+use Iyngaran\ApiResponse\Http\Traits\ApiResponse;
+use Iyngaran\LaravelMessages\Models\Message;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
-use Iyngaran\ApiResponse\Http\Traits\ApiResponse;
-use Iyngaran\LaravelMessages\Http\Requests\MessageRequest;
-use Iyngaran\LaravelMessages\Http\Resources\MessageCollection;
-use Iyngaran\LaravelMessages\Models\Message;
-use Iyngaran\LaravelMessages\Http\Resources\Message as MessageResource;
-use Iyngaran\LaravelMessages\Repositories\MessageRepositoryInterface;
+
 
 class MessageController extends Controller
 {
