@@ -3,9 +3,10 @@
 
 namespace Iyngaran\LaravelMessages\Http\Controllers\Api;
 
-use Iyngaran\LaravelMessages\Http\Resources\ReplyCollection;
 use Iyngaran\LaravelMessages\Repositories\ReplyRepositoryInterface;
 use Iyngaran\LaravelMessages\Http\Resources\Reply as ReplyResource;
+use Iyngaran\LaravelMessages\Http\Resources\ReplyCollection;
+use Iyngaran\LaravelMessages\Http\Requests\ReplyRequest;
 use Iyngaran\ApiResponse\Http\Traits\ApiResponse;
 use Iyngaran\LaravelMessages\Models\Reply;
 use App\Http\Controllers\Controller;
@@ -22,7 +23,7 @@ class ReplyController extends Controller
         $this->reply = $replyRepository;
     }
 
-    public function store(MessageRequest $request)
+    public function store(ReplyRequest $request)
     {
         $reply_message = $request->input('message');
         $message_id = $request->input('message_id');
